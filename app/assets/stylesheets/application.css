@@ -27,15 +27,17 @@ body {
   margin: 33px;
 }
 
+/*topページのCSS*/
 h1 {
   font-size: 26px;
+  margin: 17.42px 0;
 }
 
 strong {
   font-weight: bold;
 }
 
-p {
+.top-message {
   font-size: 13px;
   line-height: 18px;
   margin: 33px;
@@ -49,5 +51,12 @@ a:hover {
   cursor: pointer;
   color: #fff;
   background-color: #000;
+}
+
+
+/*投稿一覧のCSS*/
+h2 {
+  font-size: 19.5px;
+  margin: 16.185px 0;
 }
 

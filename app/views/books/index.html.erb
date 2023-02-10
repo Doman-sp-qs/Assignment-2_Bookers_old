@@ -1,3 +1,37 @@
+<!--投稿一覧-->
 <h1>
   Books
 </h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th></th>
+  </tr>
+  
+  <tr>
+    <td>title</td>
+    <td>body</td>
+    <td>function</td>
+  </tr>
+  
+  
+  
+</table>
+
+<!--新規投稿機能-->
+<h2>New book</h2>
+
+<%= form_with model: @book, url: '/books', method: :post do |f| %>
+  
+  <p>タイトル</p>
+  <%= f.text_field :title %>
+  
+  <p>本文</p>
+  <%= f.text_area :body %>
+  
+  <%= f.submit 'Create Book' %>
+  
+<% end %>
+
