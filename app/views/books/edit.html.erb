@@ -1,2 +1,28 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+<!--投稿編集ページ-->
+<h1>
+  Editing Book
+</h1>
+
+<%= form_with model: @book, url: 'books', method: :post do |f| %>
+  
+  <div class="input-field">
+    <p>Title</p>
+    <%= f.text_field :title %>
+  </div>
+  
+  <div class="input-field">
+    <p>Body</p>
+    <%= f.text_area :body %>
+  </div>
+  <div class="btn">
+    <%= f.submit 'Update Book' %>
+  </div>
+  
+  
+  <a><%= link_to "Show", book_path(@book.id) %></a>
+  |
+  <a href="/books">Back</a>
+  
+<% end %>
+
+
