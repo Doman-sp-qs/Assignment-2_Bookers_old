@@ -51,7 +51,7 @@
   
 <% end %>
 
-<%= form_with model: @book, url: 'books', method: :post do |f| %>
+<%= form_with model: @book, url: books_path, method: :post do |f| %>
   
   <div class="input-field">
     <p>Title</p>
