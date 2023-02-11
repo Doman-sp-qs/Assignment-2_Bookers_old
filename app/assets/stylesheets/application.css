@@ -38,8 +38,7 @@ strong {
   font-weight: bold;
 }
 
-.top-message {
-  line-height: 18px;
+.top-message, .book-content {
   margin: 33px;
 }
 
