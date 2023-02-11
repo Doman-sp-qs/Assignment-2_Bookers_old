@@ -1,3 +1,8 @@
+<!--サクセスメッセージ-->
+<p class="success-message">
+  <%= flash[:notice] %>
+</p>
+
 <!--投稿一覧-->
 <h1>
   Books
@@ -22,12 +27,8 @@
       </td>
       <td>
         <a>
-          <%= 
-            link_to "Destroy", book_path(book.id),
-            method: :delete, 
-            "data-confirm" => "Are you sure?"  
-          %>
-          </a>
+          <%= link_to "Destroy", book_path(book.id),method: :delete, "data-confirm" => "Are you sure?" %>
+        </a>
       </td>
     </tr>
   <% end %>
@@ -36,6 +37,19 @@
 
 <!--新規投稿機能-->
 <h2>New book</h2>
+
+<% if @book.errors.any? %>
+  
+  <section class="errors-box">
+    <h2><%= @book.errors.count %> errors prohibited this book from being saved:</h2>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </section>
+  
+<% end %>
 
 <%= form_with model: @book, url: 'books', method: :post do |f| %>
   

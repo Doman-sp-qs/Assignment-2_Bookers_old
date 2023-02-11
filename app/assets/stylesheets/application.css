@@ -38,7 +38,7 @@ strong {
   font-weight: bold;
 }
 
-.top-message, .book-content {
+.top-message, .book-content, .flash-message {
   margin: 33px;
 }
 
@@ -62,11 +62,6 @@ td {
   padding: 1px 5px 7px 5px;
 }
 
-
-
-
-
-
 /*新規投稿のCSS*/
 h2 {
   font-size: 19.5px;
@@ -82,7 +77,41 @@ input {
   padding: 1px 6px;
 }
 
+input#book_title {
+  padding: 1px 2px;
+}
+
+textarea {
+  padding: 2px;
+}
+
+/*投稿詳細ページのCSS*/
+.success-message {
+  color: #008000;
+  margin: 33px;
+}
+
 /*投稿編集のCSS*/
+.errors-box {
+  background-color: #f0f0f0;
+  width: 450px;
+  border: 2px solid red;
+  margin-bottom: 20px;
+}
+
+.errors-box > h2 {
+  background-color: #cc0000;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 5px 5px 15px;
+  margin: 0;
+}
+
+.errors-box ul {
+  padding-left: 40px;
+  margin: 33px;
+}
+
 .btn {
   margin-bottom: 10px;
 }
